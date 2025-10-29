@@ -10,6 +10,8 @@ import { Marketing } from './components/Marketing';
 import { Library } from './components/Library';
 import { Repository } from './components/Repository';
 import { AuditLog } from './components/AuditLog';
+import { BillingPayments } from './components/BillingPayments';
+import { UsersManagement } from './components/UsersManagement';
 
 export type Page = 'dashboard' | 'clients' | 'clients-grid' | 'client-detail' | 'library' | 'payments' | 'subscriptions' | 'users' | 'devices' | 'chemometrics' | 'marketing' | 'repository' | 'audit-log' | 'visum-master' | 'support';
 
@@ -57,6 +59,11 @@ export default function App() {
         return <ClientDetail onBack={handleBackToClients} />;
       case 'library':
         return <Library />;
+      case 'payments':
+      case 'subscriptions':
+        return <BillingPayments />;
+      case 'users':
+        return <UsersManagement />;
       case 'chemometrics':
         return <ImprovedChemometrics />;
       case 'marketing':
