@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react-swc'
 import path from 'path'
 
 export default defineConfig({
-  base: '/visummaster/',
+  base: '/visummaster/', // ✅ Required for GitHub Pages
 
   plugins: [react()],
 
@@ -61,7 +61,7 @@ export default defineConfig({
 
   build: {
     target: 'esnext',
-    outDir: 'dist' // ✅ required by GitHub Actions deploy
+    outDir: 'dist' // ✅ Must be 'dist' for GitHub Pages deploy workflow
   },
 
   server: {
